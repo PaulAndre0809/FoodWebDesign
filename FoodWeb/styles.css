@@ -1,0 +1,248 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #ff6347;
+    padding: 1rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+.heroLogo {
+    font-family: "Londrina Sketch", sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    color: #2c3e50; /* Dark color for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds depth */
+    letter-spacing: 1px; /* Spacing between letters */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Adds vertical spacing */
+    padding: 10px; /* Adds padding around the text */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.heroLogo:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #ff6347;
+    text-decoration: none;
+}
+
+/* Featured Recipes */
+.featured-recipes {
+    padding: 2rem;
+    background: #fff;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.recipe-card {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.recipe-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.recipe-card button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Newsletter Signup */
+.newsletter {
+    padding: 2rem;
+    text-align: center;
+    background: #ff6347;
+    color: #fff;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #ff6347;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Header */
+header {
+    background: #ff6347; /* Tomato color */
+    padding: 1rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease; /* Smooth transition for background */
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    position: relative; /* For positioning pseudo-element */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+nav a:hover {
+    color: #ffd700; /* Change color on hover */
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ffd700; /* Highlight color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    position: absolute;
+    bottom: -5px; /* Position below the text */
+    left: 0;
+}
+
+nav a:hover::after {
+    transform: scaleX(1); /* Expand underline on hover */
+}
+
+/* Change header background on scroll */
+.sticky {
+    background: #d9534f; /* Darker red */
+}

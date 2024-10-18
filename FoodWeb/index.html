@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <header>
+        <div class="logo">Foodie Haven</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><input type="text" id="search" placeholder="Search..."></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="hero-image.jpg" alt="Delicious food">
+        <h1 class="heroLogo">"Discover the Rich Tapestry of Filipino Flavors!"</h1>
+        <a href="#" class="cta-button">Explore Recipes</a>
+    </section>
+
+    <section class="featured-recipes">
+        <h2>Featured Recipes</h2>
+        <input type="text" id="recipeFilter" placeholder="Filter recipes...">
+        <div class="recipe-grid" id="recipeGrid">
+            <div class="recipe-card" data-recipe="Pasta">
+                <img src="recipe1.jpg" alt="Lumpia">
+                <h3>Lumpia</h3>
+                <p>Lumpia is a Filipino spring roll made with thin wrappers filled with meat and vegetables. It can be served fresh or fried and is often enjoyed as a snack or appetizer.</p>
+                <button class="view-recipe">View Recipe</button>
+            </div>
+            <div class="recipe-card" data-recipe="Pasta">
+                <img src="recipe2.jpeg" alt="Pasta">
+                <h3>Pasta</h3>
+                <p>Spaghetti is a long, thin pasta originating from Italy, typically made from wheat flour and water. It's often served with various sauces, like marinara or meat sauce, and topped with cheese, making it a popular and versatile dish.</p>
+                <button class="view-recipe">View Recipe</button>
+            </div>
+            <div class="recipe-card" data-recipe="Salad">
+                <img src="recipe3.jpg" alt="Salad">
+                <h3>Salad</h3>
+                <p>
+                    Salad is a dish made of mixed greens and vegetables, often topped with proteins or nuts and dressed with various sauces.</p>
+                <button class="view-recipe">View Recipe</button>
+            </div>
+            <div class="recipe-card" data-recipe="Pancit Bihon">
+                <img src="recipe4.jpeg" alt="Pancit Bihon">
+                <h3>Pancit Bihon</h3>
+                <p>Pancit bihon is a Filipino stir-fried dish made with thin rice noodles, vegetables, and meat, flavored with soy sauce and garlic.</p>
+                <button class="view-recipe">View Recipe</button>
+            </div>
+            <div class="recipe-card" data-recipe="Lechon Kawali">
+                <img src="recipe5.jpeg" alt="Lechon Kawali">
+                <h3>Lechon Kawali</h3>
+                <p>Lechon kawali is a Filipino dish consisting of deep-fried pork belly, known for its crispy skin and tender meat. It’s often served with a dipping sauce, such as liver sauce or vinegar.                </p>
+                <button class="view-recipe">View Recipe</button>
+            </div>
+            <!-- Add more recipes as needed -->
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Join Our Foodie Community</h2>
+        <form action="#" method="post">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+        </div>
+        <p>&copy; 2024 Foodie Haven. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Recipe Modal -->
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <h3>Ingredients:</h3>
+            <ul id="modalIngredients"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
