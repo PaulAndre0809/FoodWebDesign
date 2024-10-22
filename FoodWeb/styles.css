@@ -26,27 +26,8 @@ header {
 .logo {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
-    font-style: normal;
     font-size: 1.5rem;
 }
-.heroLogo {
-    font-family: "Londrina Sketch", sans-serif;
-    font-weight: 900;
-    font-size: 50px;
-    color: #2c3e50; /* Dark color for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds depth */
-    letter-spacing: 1px; /* Spacing between letters */
-    text-align: center; /* Center the text */
-    margin: 20px 0; /* Adds vertical spacing */
-    padding: 10px; /* Adds padding around the text */
-    transition: transform 0.3s; /* Smooth hover effect */
-}
-
-.heroLogo:hover {
-    transform: scale(1.05); /* Slightly enlarges on hover */
-}
-
-
 
 nav ul {
     list-style: none;
@@ -59,6 +40,21 @@ nav ul li {
 
 nav a {
     color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #ff6347;
     text-decoration: none;
 }
 
@@ -80,15 +76,6 @@ nav a {
     transform: translate(-50%, -50%);
     font-size: 2.5rem;
     color: #fff;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #fff;
-    color: #ff6347;
-    text-decoration: none;
 }
 
 /* Featured Recipes */
@@ -198,51 +185,64 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-/* Header */
-header {
-    background: #ff6347; /* Tomato color */
-    padding: 1rem;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.3s ease; /* Smooth transition for background */
+
+/* Responsive Styles */
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
 }
 
-nav ul li {
-    margin-left: 1.5rem;
-    position: relative; /* For positioning pseudo-element */
-}
+/* Mobile devices */
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 0;
-    transition: color 0.3s ease; /* Smooth transition for color */
-}
+    .logo {
+        font-size: 1.2rem;
+    }
 
-nav a:hover {
-    color: #ffd700; /* Change color on hover */
-}
+    .hero h1 {
+        font-size: 1.8rem;
+    }
 
-nav a::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #ffd700; /* Highlight color */
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-    position: absolute;
-    bottom: -5px; /* Position below the text */
-    left: 0;
-}
+    .cta-button {
+        font-size: 0.875rem;
+        padding: 8px 12px;
+    }
 
-nav a:hover::after {
-    transform: scaleX(1); /* Expand underline on hover */
-}
+    .recipe-card h3 {
+        font-size: 1.1rem;
+    }
 
-/* Change header background on scroll */
-.sticky {
-    background: #d9534f; /* Darker red */
+    footer {
+        padding: 1rem;
+        font-size: 0.875rem;
+    }
 }
